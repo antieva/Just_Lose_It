@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CreationForm(props) {
+function LoginForm(props) {
   var inputStyle =  {
     outline: 'none',
     border: 'none',
@@ -24,16 +24,15 @@ function CreationForm(props) {
     margin: '20px 30% 0 10%'
   };
 
-  function handleNewUserFormSubmission(event) {
+  function handleUserLogin(event) {
     event.preventDefault();
-    props.onNewUserCreation({name: _name.value, password: _password.value});
+    props.onLogin({name: _name.value, password: _password.value});
     _name.value = ' ';
     _password.value = ' ';
-    _passwordAgain.value = ' ';
   }
   return (
     <div className='divStyle4'>
-      <form onSubmit={handleNewUserFormSubmission}>
+      <form onSubmit={handleUserLogin}>
         <input
           style={inputStyle}
           type='text'
@@ -44,21 +43,15 @@ function CreationForm(props) {
           style={inputStyle}
           type='text'
           id='password'
-          placeholder='Create password'
+          placeholder='Password'
           ref={(input) => {_password = input;}}  />
-        <input
-          style={inputStyle}
-          type='text'
-          id='retypePassword'
-          placeholder='Retype password'
-          ref={(input) => {_passwordAgain = input;}}  />
         <button
           style={button}
-          type='submit'>Create</button>
+          type='submit'>Login</button>
       </form>
   </div>
 
   );
 }
 
-export default CreationForm;
+export default LoginForm;

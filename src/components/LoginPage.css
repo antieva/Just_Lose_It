@@ -19,6 +19,15 @@ div {
   display: block;
 }
 
+.divMargin {
+  margin-top: 15px;
+}
+
+.Or {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .signUpWindow {
   position: absolute;
   top: 0px;

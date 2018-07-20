@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoginPage.css';
 import CreationForm from './CreationForm';
+import LoginForm from './LoginForm'
 
 function LoginPage(){
   return (
@@ -30,7 +31,11 @@ function LoginPage(){
           <div className='divStyle1 _0 _25 _2s _2h'>
               <div className='divStyle2'>
                 <div className='divStyle3'>
-                  <CreationForm />
+                  <div className='divMargin'>
+                    <CreationForm />
+                  </div>
+                  <p className='Or'>Or</p>
+                  <LoginForm />
               </div>
             </div>
         </div>
