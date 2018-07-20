@@ -1,5 +1,6 @@
 import React from 'react';
 import './LoginPage.css';
+import CreationForm from './CreationForm';
 
 function LoginPage(){
   return (
@@ -24,8 +25,16 @@ function LoginPage(){
         }
       `}</style>
       <div className='homePageStyle'></div>
-
       <div className='homePage'></div>
+        <div className='signUpWindow'>
+          <div className='divStyle1 _0 _25 _2s _2h'>
+              <div className='divStyle2'>
+                <div className='divStyle3'>
+                  <CreationForm />
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   );
 }
