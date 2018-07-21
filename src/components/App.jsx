@@ -18,7 +18,7 @@ function App(){
   return (
     <div>
       <Switch>
-        <Route exact path='/' list={this.usersList} component={LandingPage} />
+        <Route exact path='/' usersList={this.usersList} component={LandingPage} />
         <Route path='/myProfile' usersList={this.usersList} component={UserProfile} />
       </Switch>
     </div>
