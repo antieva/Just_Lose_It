@@ -24,6 +24,10 @@ function CreationForm(props) {
     margin: '20px 30% 0 10%'
   };
 
+  let _name = null;
+  let _password = null;
+  let _passwordAgain = null;
+
   function handleNewUserFormSubmission(event) {
     event.preventDefault();
     props.onNewUserCreation({name: _name.value, password: _password.value});

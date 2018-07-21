@@ -1,9 +1,10 @@
 import React from 'react';
-import './LoginPage.css';
+import './LandingPage.css';
 import CreationForm from './CreationForm';
 import LoginForm from './LoginForm'
 
-function LoginPage(){
+function LandingPage(props){
+  console.log(props.list);
   return (
     <div>
       <style jsx global>{`
@@ -32,10 +33,10 @@ function LoginPage(){
               <div className='divStyle2'>
                 <div className='divStyle3'>
                   <div className='divMargin'>
-                    <CreationForm />
+                    <CreationForm usersList={props.usersList} />
                   </div>
                   <p className='Or'>Or</p>
-                  <LoginForm />
+                  <LoginForm usersList={props.usersList} />
               </div>
             </div>
         </div>
@@ -44,4 +45,4 @@ function LoginPage(){
   );
 }
 
-export default LoginPage;
+export default LandingPage;

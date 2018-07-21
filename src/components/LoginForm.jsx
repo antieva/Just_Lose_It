@@ -1,4 +1,5 @@
 import React from 'react';
+import UserProfile from './UserProfile';
 
 function LoginForm(props) {
   var inputStyle =  {
@@ -24,15 +25,29 @@ function LoginForm(props) {
     margin: '20px 30% 0 10%'
   };
 
+  let _name = null;
+  let _password = null;
+
   function handleUserLogin(event) {
     event.preventDefault();
-    props.onLogin({name: _name.value, password: _password.value});
+    let usersList = props.usersList;
+    console.log('hi1');
+    console.log(props);
+    usersList.forEach((user) => {
+      if (user.name == _name.value && user.password == _password.value) {
+        console.log('hi2');
+        console.log(user.name);
+        <Route path='/myProfile' user={user} usersList={this.usersList} component={UserProfile} />
+      } else {
+        alert('User name or password is incorrect');
+      }
+    });
     _name.value = ' ';
     _password.value = ' ';
   }
   return (
     <div className='divStyle4'>
-      <form onSubmit={handleUserLogin}>
+      <form onSubmit={handleUserLogin} >
         <input
           style={inputStyle}
           type='text'
