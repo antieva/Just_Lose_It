@@ -1,5 +1,7 @@
 import React from 'react';
 import UserProfile from './UserProfile';
+import { withRouter, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function LoginForm(props) {
   var inputStyle =  {
@@ -30,21 +32,21 @@ function LoginForm(props) {
 
   function handleUserLogin(event) {
     event.preventDefault();
-    let usersList = props.usersList;
     console.log('hi1');
-    console.log(props);
-    usersList.forEach((user) => {
+    console.log(props.userList);
+    Object.keys(props.userList).map(function(userId) {
+      var user = props.userList[userId];
+      console.log('hi2');
+      console.log(user.name);
+      console.log(_name.value);
       if (user.name == _name.value && user.password == _password.value) {
-        console.log('hi2');
-        console.log(user.name);
-        <Route path='/myProfile' user={user} usersList={this.usersList} component={UserProfile} />
-      } else {
-        alert('User name or password is incorrect');
+        return props.history.push('/myProfile');
       }
     });
     _name.value = ' ';
     _password.value = ' ';
   }
+
   return (
     <div className='divStyle4'>
       <form onSubmit={handleUserLogin} >
@@ -69,4 +71,8 @@ function LoginForm(props) {
   );
 }
 
-export default LoginForm;
+LoginForm.propTypes = {
+  userList: PropTypes.object
+};
+
+export default withRouter(LoginForm);

@@ -4,25 +4,33 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import UserProfile from './UserProfile';
 
-function App(){
-  let usersList = {
-    '0': {
-      name: 'janeDoe',
-      password: '123qwe'
-    },
-    '1': {
-      name: 'johnDoe',
-      password: '1234qwer'
-    }
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userList: {
+        '0': {
+          name: 'janeDoe',
+          password: '123qwe'
+        },
+        '1': {
+          name: 'johnDoe',
+          password: '1234qwer'
+        }
+      }
+    };
   }
-  return (
-    <div>
-      <Switch>
-        <Route exact path='/' usersList={this.usersList} component={LandingPage} />
-        <Route path='/myProfile' usersList={this.usersList} component={UserProfile} />
-      </Switch>
-    </div>
-  );
+
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path='/' render={()=><LandingPage userList={this.state.userList} />} />
+          <Route path='/myProfile' userList={this.state.userList} component={UserProfile} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
