@@ -31,7 +31,7 @@ function LandingPage(props){
       <div className='homePageStyle'></div>
       <div className='homePage'></div>
         <div className='signUpWindow'>
-          <div className='divStyle1 _0 _25 _2s _2h'>
+          <div className='divStyle1'>
               <div className='divStyle2'>
                 <div className='divStyle3'>
                   <div className='divMargin'>

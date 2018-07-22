@@ -28,6 +28,7 @@ Besides workouts and weight tracking the user can add their pictures, share thei
 
 ## ##Mocke UI
 
+![](images/Diagram.jpg)
 ![](images/img1.jpg)
 ![](images/img2.jpg)
 ![](images/img3.jpg)
