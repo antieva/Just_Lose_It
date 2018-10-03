@@ -1,6 +1,6 @@
-# Capstone Project Planning
+# Just Lose It!
 
-#### _Capstone Project: Just Lose It!, 07/13/18_
+#### _Web Application: Just Lose It, 10/02/18_
 
 #### By _**Eva Antipina**_
 
@@ -34,8 +34,6 @@ Besides workouts and weight tracking the user can add their pictures, share thei
 ![](images/img3.jpg)
 
 
-## User story:
-
 # Planning
 
 1. UI Component Hierarchy
@@ -48,21 +46,13 @@ Besides workouts and weight tracking the user can add their pictures, share thei
 
 5. Inverse Data Flow
 
-
-## Installation
-
-
-
-
-
-
 ## Support and contact details
 
 _If You run into any issues or have questions, ideas, concerns or would like to make a contribution to the code, please contact me via email: eva.antipina@gmail.com_
 
 ## Technologies Used
 
-
+ReactJS, JavaScript, reactstrap, CSS, Firebase.
 
 ### License
 
